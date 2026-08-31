@@ -28,17 +28,15 @@ bunx skills add sjnqkqh/ax-edu-skills --list
 권장: 전체 스킬 먼저 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill '*' -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --all -g
 ```
 
-`--all`은 쓰지 않습니다. 그 옵션은 전역 설치를 지원하지 않는 Eve와 PromptScript까지 넣으려 하므로 실패가 납니다. `--agent` 목록은 전역을 지원하는 에이전트만 넣습니다.
-
-특정 스킬만 설치할 때도 같은 `--agent` 목록을 씁니다.
+특정 스킬만 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g
 ```
 
 설치 반영 확인
@@ -50,7 +48,7 @@ npx --yes skills ls -g
 로컬 저장소에서 바로 전체 설치 테스트
 
 ```bash
-npx --yes skills add . --skill '*' -g -y --agent cursor claude-code
+npx --yes skills add . --all -g
 ```
 
 ## Claude Code 플러그인으로 설치

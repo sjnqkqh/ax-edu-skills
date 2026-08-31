@@ -12,10 +12,10 @@
 
 ```bash
 # 전체 스킬 설치
-npx --yes skills add sjnqkqh/ax-edu-skills --skill '*' -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --all -g
 
 # 특정 스킬만 설치
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
 ```
 
 기본 설치에는 Node.js 18 이상과 `npx`만 필요합니다. `ax-synthetic-replay`가 만든 `replay.py`를 실행할 때는 Python 3가 추가로 필요합니다. Claude Code 사용자는 아래 마켓플레이스로도 설치할 수 있습니다. 자세한 방법은 [설치 방법](docs/install.md)을 참고하세요.
