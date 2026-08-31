@@ -1,5 +1,5 @@
 ---
-name: AX 가상 문제 상황 고르기
+name: ax-virtual-problem-select
 description: >-
   use this when 가상 문제 상황 후보 여러 개 중 하나를 골라 마크다운 파일 하나로 고정할 때. 선정 이유는 선택이다. 없으면 그
   상황의 AX 전환이 필요한 이유 정성 문단을 넣는다. 고르지 않았으면 목록만 보여주고 멈춘다.

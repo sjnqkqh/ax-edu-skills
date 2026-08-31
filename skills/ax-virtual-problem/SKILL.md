@@ -1,5 +1,5 @@
 ---
-name: AX 가상 문제 상황
+name: ax-virtual-problem
 description: >-
   use this when 직군·직종을 받아 AX 교육·포트폴리오용 가상 문제 상황 3~5개를 만들어 줄 때. 있는 말을 쓰고 없는
   합성어·줄임 제목을 만들지 않는다. AX 전환이 필요한 이유의 정량은 근무일 20일 기준 N시간과 월 NNN만 원이다. 배경은 빈 줄로 나뉜
