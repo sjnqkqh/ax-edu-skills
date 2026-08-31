@@ -1,0 +1,13 @@
+{
+  "name": "ax-edu-skills",
+  "description": "AX 교육·포트폴리오용 가상 문제 상황, 선정, 합성 데이터 재현 스킬",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sjnqkqh/ax-edu-skills",
+  "repository": "https://github.com/sjnqkqh/ax-edu-skills",
+  "license": "MIT",
+  "skills": [
+    "./skills/ax-virtual-problem",
+    "./skills/ax-virtual-problem-select",
+    "./skills/ax-synthetic-replay"
+  ]
+}

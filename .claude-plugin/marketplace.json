@@ -1,0 +1,13 @@
+{
+  "name": "ax-edu-skills",
+  "owner": {
+    "name": "sjnqkqh"
+  },
+  "plugins": [
+    {
+      "name": "ax-edu-skills",
+      "source": "./",
+      "description": "AX 교육·포트폴리오용 가상 문제 상황, 선정, 합성 데이터 재현 스킬"
+    }
+  ]
+}
