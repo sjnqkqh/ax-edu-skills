@@ -18,7 +18,7 @@ npx --yes skills add sjnqkqh/ax-edu-skills --all -g
 npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
 ```
 
-기본 설치에는 Node.js 18 이상과 `npx`만 필요합니다. `ax-synthetic-replay`가 만든 `replay.py`를 실행할 때는 Python 3가 추가로 필요합니다. Claude Code 사용자는 아래 마켓플레이스로도 설치할 수 있습니다. 자세한 방법은 [설치 방법](docs/install.md)을 참고하세요.
+기본 설치에는 Node.js 18 이상과 `npx`만 필요합니다. `ax-synthetic-replay`가 만든 재현 스크립트를 실행할 때는 Python 3가 추가로 필요합니다. Claude Code 사용자는 아래 마켓플레이스로도 설치할 수 있습니다. 자세한 방법은 [설치 방법](docs/install.md)을 참고하세요.
 
 ## 사용 순서
 
