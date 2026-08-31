@@ -78,4 +78,4 @@ npx --yes skills add . --all -g
 
 ## 합성 데이터 재현을 돌릴 때
 
-`ax-synthetic-replay`가 만든 재현 스크립트는 Python 3 표준 라이브러리만 씁니다. 스킬 설치와는 별개이며, 재현 스크립트를 실행할 때만 Python 3가 필요합니다.
+`ax-synthetic-replay`가 만든 재현 스크립트는 Python 3가 필요합니다. 패키지가 있으면 그 산출물의 README.md를 따릅니다. 스킬 설치와는 별개입니다.
