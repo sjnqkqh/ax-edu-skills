@@ -28,15 +28,17 @@ bunx skills add sjnqkqh/ax-edu-skills --list
 권장: 전체 스킬 먼저 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --all -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill '*' -g -y
 ```
+
+`--all`은 쓰지 않습니다. 그 옵션은 전역 설치를 지원하지 않는 에이전트까지 넣으려 하므로 실패가 납니다. 이 저장소의 세 스킬을 전역으로 넣으려면 `--skill '*' -g -y`를 씁니다.
 
 특정 스킬만 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g -y
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g -y
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g -y
 ```
 
 설치 반영 확인
@@ -48,7 +50,7 @@ npx --yes skills ls -g
 로컬 저장소에서 바로 전체 설치 테스트
 
 ```bash
-npx --yes skills add . --all -g
+npx --yes skills add . --skill '*' -g -y
 ```
 
 ## Claude Code 플러그인으로 설치
