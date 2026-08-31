@@ -6,8 +6,8 @@
   "repository": "https://github.com/sjnqkqh/ax-edu-skills",
   "license": "MIT",
   "skills": [
-    "./skills/ax-virtual-problem-situation-create",
-    "./skills/ax-virtual-problem-situation-select",
-    "./skills/ax-virtual-problem-data-generate"
+    "./skills/virtual-problem-situation-create",
+    "./skills/virtual-problem-situation-select",
+    "./skills/virtual-problem-data-generate"
   ]
 }

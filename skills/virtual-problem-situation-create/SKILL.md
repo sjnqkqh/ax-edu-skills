@@ -1,5 +1,5 @@
 ---
-name: ax-virtual-problem-situation-create
+name: virtual-problem-situation-create
 description: >-
   use this when 직군·직종을 받아 교육·포트폴리오용 가상 문제 3~5개를 만들어 줄 때. virtual-problem-situation-create.
   있는 말을 쓰고 없는 합성어·줄임 제목을 만들지 않는다. 이 상황이 문제인 이유의 정량은 근무일 20일 기준 N시간과 월 NNN만

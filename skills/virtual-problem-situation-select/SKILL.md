@@ -1,12 +1,12 @@
 ---
-name: ax-virtual-problem-situation-select
+name: virtual-problem-situation-select
 description: >-
   use this when 가상 문제 후보 여러 개 중 하나를 골라 마크다운 파일 하나로 고정할 때. virtual-problem-situation-select.
   선정 이유는 선택이다. 없으면 그 상황의 이 상황이 문제인 이유 정성 문단을 넣는다. 고르지 않았으면 목록만 보여주고 멈춘다.
 ---
 # 가상 문제 선별
 
-가상 문제 후보 여러 개 가운데 하나를 고른다. 고른 상황만 마크다운 파일 하나로 남긴다. 다음 스킬(ax-virtual-problem-data-generate)은 이 파일만 읽는다. 해결 설계는 쓰지 않는다.
+가상 문제 후보 여러 개 가운데 하나를 고른다. 고른 상황만 마크다운 파일 하나로 남긴다. 다음 스킬(virtual-problem-data-generate)은 이 파일만 읽는다. 해결 설계는 쓰지 않는다.
 
 ## 문장
 짧게 쓰는 것보다 있는 말을 쓰는 것이 우선이다.

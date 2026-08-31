@@ -1,5 +1,5 @@
 ---
-name: ax-virtual-problem-data-generate
+name: virtual-problem-data-generate
 description: >-
   use this when 가상 문제 하나를 받아 학생이 그 장면을 겪도록 합성 데이터와 재현 스크립트를 만들 때. virtual-problem-data-generate.
   해결 설계는 넣지 않고 현재 업무 그대로만 재현한다.
@@ -20,7 +20,7 @@ description: >-
 - 기존 비용
 - 이 상황을 다시 만들 때 필요한 입력
 
-여러 상황이 한꺼번에 오면 ax-virtual-problem-situation-select로 보낸다. 여기서 목록을 고르게 하지 않는다.
+여러 상황이 한꺼번에 오면 virtual-problem-situation-select로 보낸다. 여기서 목록을 고르게 하지 않는다.
 
 ## 목표
 1. 매일 반복 장면을 데이터로 재현한다.
