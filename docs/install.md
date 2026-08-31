@@ -3,7 +3,7 @@
 ## 기본 설치 흐름
 
 1. Node.js 18 이상과 `npx`가 사용 가능한지 확인합니다.
-2. 합성 데이터 재현 결과를 `python replay.py`로 돌릴 때는 Python 3가 사용 가능한지 확인합니다.
+2. `ax-virtual-problem-data-generate`가 만든 재현 스크립트를 돌릴 때는 Python 3가 사용 가능한지 확인합니다.
 3. 전체 스킬을 먼저 설치합니다.
 4. 그 다음 사용 순서대로 스킬을 호출합니다.
 
@@ -34,9 +34,9 @@ npx --yes skills add sjnqkqh/ax-edu-skills --all -g
 특정 스킬만 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-situation-create -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-situation-select -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-data-generate -g
 ```
 
 설치 반영 확인
@@ -70,12 +70,12 @@ npx --yes skills add . --all -g
 
 `npx`를 쓰지 않을 때만 아래 폴더를 프로젝트의 `.cursor/skills/` 또는 사용자 스킬 폴더로 복사합니다.
 
-- `skills/ax-virtual-problem`
-- `skills/ax-virtual-problem-select`
-- `skills/ax-synthetic-replay`
+- `skills/ax-virtual-problem-situation-create`
+- `skills/ax-virtual-problem-situation-select`
+- `skills/ax-virtual-problem-data-generate`
 
 이 저장소를 프로젝트 루트로 열면 `.cursor/skills/`에 같은 스킬이 이미 있습니다.
 
-## 합성 데이터 재현을 돌릴 때
+## 재현 스크립트를 돌릴 때
 
-`ax-synthetic-replay`가 만든 `replay.py`는 Python 3 표준 라이브러리만 씁니다. 스킬 설치와는 별개이며, 재현 스크립트를 실행할 때만 Python 3가 필요합니다.
+`ax-virtual-problem-data-generate`가 만든 재현 스크립트는 Python 3가 필요합니다. 패키지가 있으면 그 산출물의 README.md를 따릅니다. 스킬 설치와는 별개입니다.
