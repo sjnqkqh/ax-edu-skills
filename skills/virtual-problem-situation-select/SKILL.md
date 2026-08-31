@@ -2,7 +2,7 @@
 name: virtual-problem-situation-select
 description: >-
   use this when 가상 문제 후보 여러 개 중 하나를 골라 마크다운 파일 하나로 고정할 때. virtual-problem-situation-select.
-  선정 이유는 선택이다. 없으면 그 상황의 이 상황이 문제인 이유 정성 문단을 넣는다. 고르지 않았으면 목록만 보여주고 멈춘다.
+  선정 이유는 선택이다. 없으면 「이 상황이 문제인 이유」 정성 문단을 넣는다. 고르지 않았으면 목록만 보여주고 멈춘다.
 ---
 # 가상 문제 선별
 
