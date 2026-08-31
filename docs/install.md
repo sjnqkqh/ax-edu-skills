@@ -28,15 +28,17 @@ bunx skills add sjnqkqh/ax-edu-skills --list
 권장: 전체 스킬 먼저 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --all -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill '*' -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
 ```
 
-특정 스킬만 설치
+`--all`은 쓰지 않습니다. 그 옵션은 전역 설치를 지원하지 않는 Eve와 PromptScript까지 넣으려 하므로 실패가 납니다. `--agent` 목록은 전역을 지원하는 에이전트만 넣습니다.
+
+특정 스킬만 설치할 때도 같은 `--agent` 목록을 씁니다.
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g -y --agent aider-desk amp antigravity antigravity-cli astrbot autohand-code augment bob claude-code openclaw cline codearts-agent codebuddy codemaker codestudio codex command-code continue cortex crush cursor deepagents devin dexto droid firebender forgecode gemini-cli github-copilot goose grok hermes-agent inference-sh jazz junie iflow-cli kilo kimchi kimi-code-cli kiro-cli kode lingma loaf mcpjam minimax-code mistral-vibe moxby mux opencode openhands ona pi posit-assistant qoder qoder-cn qwen-code replit reasonix rovodev roo tabnine-cli terramind tinycloud trae trae-cn warp windsurf zed zcode zencoder zenflow neovate pochi adal universal
 ```
 
 설치 반영 확인
@@ -48,17 +50,7 @@ npx --yes skills ls -g
 로컬 저장소에서 바로 전체 설치 테스트
 
 ```bash
-npx --yes skills add . --all -g
-```
-
-## 전역 설치에서 Eve, PromptScript
-
-`--all -g`는 전역 설치를 지원하는 에이전트에 세 스킬을 넣습니다. Eve와 PromptScript는 프로젝트 전용이라 전역 설치를 지원하지 않습니다. 그 두 곳에 실패가 찍혀도 나머지 에이전트에는 설치됩니다. 이 저장소의 스킬을 고쳐도 없어지지 않으며, `skills` CLI 쪽 제한입니다.
-
-그 둘에 넣으려면 `-g` 없이 프로젝트 설치를 씁니다.
-
-```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --all
+npx --yes skills add . --skill '*' -g -y --agent cursor claude-code
 ```
 
 ## Claude Code 플러그인으로 설치
