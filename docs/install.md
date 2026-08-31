@@ -28,17 +28,15 @@ bunx skills add sjnqkqh/ax-edu-skills --list
 권장: 전체 스킬 먼저 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill '*' -g -y
+npx --yes skills add sjnqkqh/ax-edu-skills --all -g
 ```
-
-`--all`은 쓰지 않습니다. 그 옵션은 전역 설치를 지원하지 않는 에이전트까지 넣으려 하므로 실패가 납니다. 이 저장소의 세 스킬을 전역으로 넣으려면 `--skill '*' -g -y`를 씁니다.
 
 특정 스킬만 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g -y
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g -y
-npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g -y
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-virtual-problem-select -g
+npx --yes skills add sjnqkqh/ax-edu-skills --skill ax-synthetic-replay -g
 ```
 
 설치 반영 확인
@@ -50,7 +48,17 @@ npx --yes skills ls -g
 로컬 저장소에서 바로 전체 설치 테스트
 
 ```bash
-npx --yes skills add . --skill '*' -g -y
+npx --yes skills add . --all -g
+```
+
+## 전역 설치에서 Eve, PromptScript
+
+`--all -g`는 전역 설치를 지원하는 에이전트에 세 스킬을 넣습니다. Eve와 PromptScript는 프로젝트 전용이라 전역 설치를 지원하지 않습니다. 그 두 곳에 실패가 찍혀도 나머지 에이전트에는 설치됩니다. 이 저장소의 스킬을 고쳐도 없어지지 않으며, `skills` CLI 쪽 제한입니다.
+
+그 둘에 넣으려면 `-g` 없이 프로젝트 설치를 씁니다.
+
+```bash
+npx --yes skills add sjnqkqh/ax-edu-skills --all
 ```
 
 ## Claude Code 플러그인으로 설치
