@@ -1,10 +1,10 @@
 [한글](README.md)
 
-# Virtual Problem Situation Skills (ax-edu-skills)
+# Virtual Problem Situation Skills (virtual-problem-skills)
 
 An agent skill suite that generates **job-family-based realistic workplace problem scenarios and synthetic practice datasets (including replay scripts)** step by step, designed for education and student portfolios.
 
-Real workplace inefficiencies and problems are rarely shared externally due to confidentiality and domain barriers. `ax-edu-skills` takes a job family and role, designs plausible daily bottlenecks and operational friction, and builds an environment where learners can directly experience and reproduce these issues through synthetic data and simulation scripts.
+Real workplace inefficiencies and problems are rarely shared externally due to confidentiality and domain barriers. `virtual-problem-skills` takes a job family and role, designs plausible daily bottlenecks and operational friction, and builds an environment where learners can directly experience and reproduce these issues through synthetic data and simulation scripts.
 
 > **Design Philosophy**  
 > This toolkit focuses strictly on **defining the problem situation and building the simulation environment**. It does not provide solutions or automated code. The learner is intended to diagnose the root cause and engineer their own solution (via automation, data pipelines, AI agents, etc.). Not every problem needs to be solved with AI.
@@ -62,21 +62,21 @@ Once Step 3 completes, an independent project directory is generated for the lea
 In [Claude Code](https://claude.com/claude-code), install all skills at once through the plugin marketplace:
 
 ```bash
-/plugin marketplace add sjnqkqh/ax-edu-skills
-/plugin install ax-edu-skills@ax-edu-skills
+/plugin marketplace add sjnqkqh/virtual-problem-skills
+/plugin install virtual-problem-skills@virtual-problem-skills
 ```
 
-Skills will be available under the `/ax-edu-skills:<skill-name>` namespace.
+Skills will be available under the `/virtual-problem-skills:<skill-name>` namespace.
 
 ### 2. Global Install via npx CLI (Cursor, Codex, etc.)
 Run the `npx skills` command in your terminal for global installation:
 
 ```bash
 # Install all skills
-npx --yes skills add sjnqkqh/ax-edu-skills --all -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --all -g
 
 # Install a specific skill
-npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-create -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --skill virtual-problem-situation-create -g
 ```
 
 > For manual installation or other agent environments, refer to [Installation Guide](docs/install.md).
@@ -90,7 +90,7 @@ Once installed, invoke the skills sequentially in your conversation with an AI a
 ### Step 1: Create Problem Situations
 Provide the job family and role to generate virtual problem candidates:
 ```text
-/ax-edu-skills:virtual-problem-situation-create
+/virtual-problem-skills:virtual-problem-situation-create
 Job Family: Accounting
 Role: Logistics
 ```
@@ -99,7 +99,7 @@ Role: Logistics
 ### Step 2: Select a Problem Situation
 Select your preferred case to freeze into a markdown file:
 ```text
-/ax-edu-skills:virtual-problem-situation-select
+/virtual-problem-skills:virtual-problem-situation-select
 Selection: Case 1 (Reconciling Carrier Invoices with Transit Logs)
 ```
 *(The agent creates a single markdown file, e.g., `carrier-invoice-transit-log-reconciliation.md`.)*
@@ -107,7 +107,7 @@ Selection: Case 1 (Reconciling Carrier Invoices with Transit Logs)
 ### Step 3: Generate Practice Data & Replay Script
 Point to the generated markdown file to build the full practice environment:
 ```text
-/ax-edu-skills:virtual-problem-data-generate
+/virtual-problem-skills:virtual-problem-data-generate
 Input: carrier-invoice-transit-log-reconciliation.md
 ```
 *(The practice directory with synthetic datasets and simulation scripts is created.)*

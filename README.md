@@ -1,10 +1,10 @@
 [English](README.en.md)
 
-# 가상 문제 상황 스킬 (ax-edu-skills)
+# 가상 문제 상황 스킬 (virtual-problem-skills)
 
 실제 현장 데이터를 접하기 어려운 교육 환경 및 취업 준비생을 위해, **직군·직종 기반의 현실적인 가상 업무 문제 상황과 실습용 합성 데이터셋(재현 스크립트 포함)**을 단계별로 생성해 주는 에이전트 스킬 모음입니다.
 
-실무 현장의 비효율과 문제는 기업 기밀이나 도메인 특성상 외부에 공개되기 어렵습니다. `ax-edu-skills`는 직군과 직종 정보만으로 현장에서 실제로 일어날 법한 반복 업무와 병목 시나리오를 만들고, 이를 직접 데이터와 스크립트로 재현해 볼 수 있는 실습 환경을 빌드합니다.
+실무 현장의 비효율과 문제는 기업 기밀이나 도메인 특성상 외부에 공개되기 어렵습니다. `virtual-problem-skills`는 직군과 직종 정보만으로 현장에서 실제로 일어날 법한 반복 업무와 병목 시나리오를 만들고, 이를 직접 데이터와 스크립트로 재현해 볼 수 있는 실습 환경을 빌드합니다.
 
 > **설계 철학**  
 > 본 도구는 **문제 정의와 실습 환경 구축**까지만 지원하며, 해결책이나 자동화 코드를 직접 제공하지 않습니다. 문제의 원인을 파악하고 해결책(자동화, 데이터 파이프라인, AI 에이전트 등)을 설계하는 과정은 학습자가 직접 수행하도록 유도합니다. (모든 문제를 인공지능으로 해결할 필요는 없습니다.)
@@ -62,21 +62,21 @@ graph LR
 [Claude Code](https://claude.com/claude-code) 환경에서는 마켓플레이스를 통해 전체 스킬을 한 번에 설치할 수 있습니다.
 
 ```bash
-/plugin marketplace add sjnqkqh/ax-edu-skills
-/plugin install ax-edu-skills@ax-edu-skills
+/plugin marketplace add sjnqkqh/virtual-problem-skills
+/plugin install virtual-problem-skills@virtual-problem-skills
 ```
 
-설치 후에는 `/ax-edu-skills:<스킬 이름>` 네임스페이스로 스킬을 호출할 수 있습니다.
+설치 후에는 `/virtual-problem-skills:<스킬 이름>` 네임스페이스로 스킬을 호출할 수 있습니다.
 
 ### 2. npx CLI로 전역 설치 (Cursor, Codex, 기타 환경)
 터미널에서 `npx skills` 명령어로 전역 설치합니다.
 
 ```bash
 # 전체 스킬 설치
-npx --yes skills add sjnqkqh/ax-edu-skills --all -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --all -g
 
 # 특정 스킬만 개별 설치
-npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-create -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --skill virtual-problem-situation-create -g
 ```
 
 > 수동 설치 및 기타 에이전트 설정에 대한 상세한 내용은 [설치 방법 가이드](docs/install.md)를 참고하세요.
@@ -90,7 +90,7 @@ npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-cre
 ### 1단계: 문제 상황 생성
 에이전트에게 직군과 직종을 전달하여 가상 문제 후보를 요청합니다.
 ```text
-/ax-edu-skills:virtual-problem-situation-create
+/virtual-problem-skills:virtual-problem-situation-create
 직군: 회계
 직종: 물류
 ```
@@ -99,7 +99,7 @@ npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-cre
 ### 2단계: 문제 상황 선별
 제시된 후보 중 실습에 사용할 상황을 선택하여 파일로 저장합니다.
 ```text
-/ax-edu-skills:virtual-problem-situation-select
+/virtual-problem-skills:virtual-problem-situation-select
 선택: 1번 (운송사 청구서와 운행 기록 맞추기)
 ```
 *(선택한 상황이 단일 마크다운 파일(예: `운송사-청구서-운행-기록-맞추기.md`)로 생성됩니다.)*
@@ -107,7 +107,7 @@ npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-cre
 ### 3단계: 실습 데이터 및 스크립트 생성
 생성된 마크다운 파일을 지정하여 실습 환경 구축을 요청합니다.
 ```text
-/ax-edu-skills:virtual-problem-data-generate
+/virtual-problem-skills:virtual-problem-data-generate
 입력: 운송사-청구서-운행-기록-맞추기.md
 ```
 *(합성 데이터셋과 비효율 재현 스크립트가 포함된 실습 폴더가 생성됩니다.)*
