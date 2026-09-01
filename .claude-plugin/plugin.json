@@ -1,9 +1,9 @@
 {
-  "name": "ax-edu-skills",
+  "name": "virtual-problem-skills",
   "description": "교육·포트폴리오용 가상 문제 생성, 가상 문제 선별, 가상 문제 데이터 합성 스킬",
   "version": "1.0.0",
-  "homepage": "https://github.com/sjnqkqh/ax-edu-skills",
-  "repository": "https://github.com/sjnqkqh/ax-edu-skills",
+  "homepage": "https://github.com/sjnqkqh/virtual-problem-skills",
+  "repository": "https://github.com/sjnqkqh/virtual-problem-skills",
   "license": "MIT",
   "skills": [
     "./skills/virtual-problem-situation-create",

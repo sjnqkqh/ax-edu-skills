@@ -12,7 +12,7 @@
 Codex나 Claude Code에 아래 문장을 그대로 붙여 넣으면 됩니다.
 
 ```text
-이 레포의 설치 문서를 읽고 ax-edu-skills 전체 스킬을 먼저 설치해줘. 끝나면 설치된 스킬과 사용 순서만 짧게 정리해.
+이 레포의 설치 문서를 읽고 virtual-problem-skills 전체 스킬을 먼저 설치해줘. 끝나면 설치된 스킬과 사용 순서만 짧게 정리해.
 ```
 
 ## 직접 설치
@@ -20,23 +20,23 @@ Codex나 Claude Code에 아래 문장을 그대로 붙여 넣으면 됩니다.
 `skills` 설치 명령은 아래 셋 중 하나만 있으면 됩니다.
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --list
-pnpm dlx skills add sjnqkqh/ax-edu-skills --list
-bunx skills add sjnqkqh/ax-edu-skills --list
+npx --yes skills add sjnqkqh/virtual-problem-skills --list
+pnpm dlx skills add sjnqkqh/virtual-problem-skills --list
+bunx skills add sjnqkqh/virtual-problem-skills --list
 ```
 
 권장: 전체 스킬 먼저 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --all -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --all -g
 ```
 
 특정 스킬만 설치
 
 ```bash
-npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-create -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-situation-select -g
-npx --yes skills add sjnqkqh/ax-edu-skills --skill virtual-problem-data-generate -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --skill virtual-problem-situation-create -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --skill virtual-problem-situation-select -g
+npx --yes skills add sjnqkqh/virtual-problem-skills --skill virtual-problem-data-generate -g
 ```
 
 설치 반영 확인
@@ -54,8 +54,8 @@ npx --yes skills add . --all -g
 ## Claude Code 플러그인으로 설치
 
 ```
-/plugin marketplace add sjnqkqh/ax-edu-skills
-/plugin install ax-edu-skills@ax-edu-skills
+/plugin marketplace add sjnqkqh/virtual-problem-skills
+/plugin install virtual-problem-skills@virtual-problem-skills
 ```
 
 ## npx도 없으면
