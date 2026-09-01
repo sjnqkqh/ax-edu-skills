@@ -4,3 +4,4 @@ Thumbs.db
 __pycache__/
 .venv/
 .env
+test-run/
