@@ -68,13 +68,13 @@ npx --yes skills add . --all -g
 
 ## 수동 복사
 
-`npx`를 쓰지 않을 때만 아래 폴더를 프로젝트의 `.cursor/skills/` 또는 사용자 스킬 폴더로 복사합니다.
+`npx`를 쓰지 않을 때만 아래 폴더를 프로젝트의 `.agents/skills/`(Antigravity/Gemini CLI) 또는 `.cursor/skills/`(Cursor)로 복사합니다.
 
 - `skills/virtual-problem-situation-create`
 - `skills/virtual-problem-situation-select`
 - `skills/virtual-problem-data-generate`
 
-이 저장소를 프로젝트 루트로 열면 `.cursor/skills/`에 같은 스킬이 이미 있습니다.
+이 저장소를 프로젝트 루트로 열면 `.agents/skills/`와 `.cursor/skills/`에 같은 스킬이 이미 준비되어 있습니다.
 
 ## 재현 스크립트를 돌릴 때
 
