@@ -28,7 +28,19 @@ graph LR
 | **2단계** | [`virtual-problem-situation-select`](skills/virtual-problem-situation-select/SKILL.md) | 후보 중 1개 선택, (선택) 선정 사유 | 단일 상황 마크다운 문서 (`.md`) | 다음 단계 데이터 합성을 위해 선택한 문제 명세를 표준 규격 파일로 고정 |
 | **3단계** | [`virtual-problem-data-generate`](skills/virtual-problem-data-generate/SKILL.md) | 2단계 마크다운 문서 | 실습 폴더 (데이터, 스크립트, 가이드) | 노이즈가 포함된 실무 합성 데이터와 현재 업무의 비효율을 시뮬레이션하는 재현 스크립트 생성 |
 
-* 실습 시나리오 작성 예시: [회계·물류 문제 상황 예시](examples/accounting-logistics.md)
+## 단계별 산출물 쇼케이스 (Showcase)
+
+`virtual-problem-skills`의 3단계 파이프라인을 거쳐 최종적으로 어떤 실습 환경과 데이터가 만들어지는지 실제 생성된 예시를 통해 확인할 수 있습니다:
+
+1. **[1단계 문제 후보 생성 예시](examples/accounting-logistics.md)**:
+   - 직군(회계)과 직종(물류)을 입력받아 도출된 3가지 현실적인 가상 문제 상황 후보
+2. **[2단계 문제 선별 명세서 예시](examples/운송사-청구서-운행-기록-맞추기.md)**:
+   - 후보 중 1번 상황을 선정하여 단일 표준 마크다운 명세서로 확정한 문서
+3. **[3단계 최종 실습 패키지 (데이터셋 & 재현 스크립트)](examples/운송사-청구서-운행-기록-맞추기/)**:
+   - [과제 안내서 (`README.md`)](examples/운송사-청구서-운행-기록-맞추기/README.md) 및 [데이터 스키마 (`schema.md`)](examples/운송사-청구서-운행-기록-맞추기/schema.md)
+   - [수작업 재현 스크립트 (`reconcile_carrier_invoices.py`)](examples/운송사-청구서-운행-기록-맞추기/reconcile_carrier_invoices.py): PDF 청구서와 회전/기울임/원거리 노이즈가 포함된 JPG 인수증을 대조하여 20%의 재작업과 인건비 손실을 출력하는 시뮬레이션 코드
+   - [실습용 바이너리 데이터셋 (`data/`)](examples/운송사-청구서-운행-기록-맞추기/data/): 실제 40건의 [청구서 PDF](examples/운송사-청구서-운행-기록-맞추기/data/invoices_pdf/)와 스마트폰 촬영 [인수증 JPG](examples/운송사-청구서-운행-기록-맞추기/data/receipts_jpg/) 및 대조 마스터 CSV
+   - [채점용 기준 데이터 (`hidden/`)](examples/운송사-청구서-운행-기록-맞추기/hidden/): 인건비 가정치 JSON 및 정답/노이즈 메타데이터 CSV
 
 ---
 
