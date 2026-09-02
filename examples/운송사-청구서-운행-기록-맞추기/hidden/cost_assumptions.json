@@ -1,0 +1,13 @@
+{
+  "job_role": "회계",
+  "job_category": "물류",
+  "daily_cases": 40,
+  "handling_minutes_per_case": 12,
+  "hourly_wage": 25000,
+  "rework_rate": 0.2,
+  "rework_minutes_per_case": 10,
+  "daily_labor_cost": 200000,
+  "daily_rework_cost": 33333,
+  "daily_total_cost": 233333,
+  "monthly_total_cost": 4666660
+}

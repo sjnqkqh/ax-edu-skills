@@ -28,7 +28,19 @@ graph LR
 | **Step 2** | [`virtual-problem-situation-select`](skills/virtual-problem-situation-select/SKILL.md) | 1 chosen case, (optional) selection reason | Single situation markdown file (`.md`) | Freezes the selected case specification into a standard markdown file for data synthesis |
 | **Step 3** | [`virtual-problem-data-generate`](skills/virtual-problem-data-generate/SKILL.md) | Markdown file from Step 2 | Practice folder (data, scripts, guide) | Generates synthetic workplace data with real-world noise and a Python replay script simulating current manual friction |
 
-* Sample Scenario Output: [Accounting & Logistics Example](examples/accounting-logistics.md)
+## Step-by-Step Artifact Showcase
+
+Explore the full end-to-end artifacts generated across the 3-step pipeline:
+
+1. **[Step 1 Problem Candidates Example](examples/accounting-logistics.md)**:
+   - 3 realistic virtual problem candidates generated for Accounting & Logistics.
+2. **[Step 2 Selected Situation Specification](examples/운송사-청구서-운행-기록-맞추기.md)**:
+   - Standardized single situation specification frozen from candidate #1.
+3. **[Step 3 Complete Practice Package (Dataset & Replay Script)](examples/운송사-청구서-운행-기록-맞추기/)**:
+   - [Assignment Guide (`README.md`)](examples/운송사-청구서-운행-기록-맞추기/README.md) & [Data Schema (`schema.md`)](examples/운송사-청구서-운행-기록-맞추기/schema.md)
+   - [Manual Replay Script (`reconcile_carrier_invoices.py`)](examples/운송사-청구서-운행-기록-맞추기/reconcile_carrier_invoices.py): Python script that parses PDF invoices and rotated/angled smartphone JPG receipts to simulate 20% rework and operational labor costs.
+   - [Operational Binary Dataset (`data/`)](examples/운송사-청구서-운행-기록-맞추기/data/): 40 real [PDF invoices](examples/운송사-청구서-운행-기록-맞추기/data/invoices_pdf/) and smartphone-captured [JPG delivery receipts](examples/운송사-청구서-운행-기록-맞추기/data/receipts_jpg/) along with dispatch lookup CSVs.
+   - [Ground Truth Evaluation Data (`hidden/`)](examples/운송사-청구서-운행-기록-맞추기/hidden/): Cost assumption JSON and ground truth labels with noise metadata.
 
 ---
 
